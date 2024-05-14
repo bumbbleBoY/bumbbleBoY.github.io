@@ -5,7 +5,7 @@ let checkbox = document.getElementById("checkbox");
 tg.expand();
 
 checkbox.addEventListener("change", () => {
-    if (this.checked) {
+    if (document.getElementById("checkbox").checked) {
         document.getElementById("next").style.display = "block";
     } else {
         document.getElementById("next").style.display = "none";
