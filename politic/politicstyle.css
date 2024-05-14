@@ -23,3 +23,32 @@ h3{
 #politiclist{
     text-align: left;
 }
+
+#politicinfo{
+    text-align: left;
+    text-indent: 10px;
+}
+
+button{
+    border: 0;
+    border-radius: 5px;
+    margin-top: 50px;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 500ms ease;
+    color: var(--tg-theme-button-color);
+    background: var(--tg-theme-button-text-color);
+    border-color: black;
+}
+
+
+button:hover{
+    background: var(--tg-theme-secondary-bg-color);
+}
+
+#back {
+    text-align: center;
+}
