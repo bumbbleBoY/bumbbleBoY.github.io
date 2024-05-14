@@ -4,9 +4,9 @@ tg.expand();
 
 document.getElementById("checkbox").addEventListener("change", () => {
     if (document.getElementById("checkbox").checked) {
-        document.getElementById("order").style.display = "flex";
+        document.getElementById("endbutton").style.display = "block";
     } else {
-        document.getElementById("order").style.display = "none";
+        document.getElementById("endbutton").style.display = "none";
     }
 })
 order.addEventListener("click", () => {
@@ -42,8 +42,7 @@ order.addEventListener("click", () => {
         || (data['division'].length < 4) 
         || (data['inn'].length < 5) 
         || (data['snils'].length < 5)) {
-        document.getElementById("error").innerText = "Заполните все обязательные поля";
-        return;
+        return document.getElementById("error").style.display = "block";
     }
     tg.sendData(JSON.stringify(data));
     tg.close();

@@ -77,8 +77,10 @@ input:focus {
 
 #error{
     color: red;
+    display: none;
 }
 
-#paragcheck {
-    margin-top: 20px;
+#endbutton{
+    display: none;
+    text-align: center;
 }
