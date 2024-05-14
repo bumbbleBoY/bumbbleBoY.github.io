@@ -74,6 +74,11 @@ button:hover{
 input:focus {
     border-color: green;
 }
+
 #error{
     color: red;
+}
+
+#paragcheck {
+    margin-top: 20px;
 }

@@ -4,19 +4,11 @@ tg.expand();
 
 document.getElementById("checkbox").addEventListener("change", () => {
     if (document.getElementById("checkbox").checked) {
-        document.getElementById("next").style.display = "flex";
+        document.getElementById("order").style.display = "flex";
     } else {
-        document.getElementById("next").style.display = "none";
+        document.getElementById("order").style.display = "none";
     }
 })
-
-next.addEventListener("click", () => {
-    if (document.getElementById("checkbox").checked) {
-        document.getElementById("main").style.display = "none";
-        document.getElementById("form").style.display = "block";
-    }
-});
-
 order.addEventListener("click", () => {
     let data = {
         name: document.getElementById("user_name").value,
