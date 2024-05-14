@@ -4,8 +4,12 @@ let next = document.getElementById("next");
 let checkbox = document.getElementById("checkbox");
 tg.expand();
 
-checkbox.addEventListener("checked", () => {
-    document.getElementById("next").style.display = "block";
+checkbox.addEventListener("change", () => {
+    if (this.checked) {
+        document.getElementById("next").style.display = "block";
+    } else {
+        document.getElementById("next").style.display = "none";
+    }
 })
 
 next.addEventListener("click", () => {
