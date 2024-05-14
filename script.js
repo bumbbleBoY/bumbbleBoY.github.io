@@ -6,7 +6,7 @@ tg.expand();
 
 checkbox.addEventListener("change", () => {
     if (document.getElementById("checkbox").checked) {
-        document.getElementById("next").style.display = "block";
+        document.getElementById("next").style.display = "flex";
     } else {
         document.getElementById("next").style.display = "none";
     }
