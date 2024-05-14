@@ -1,10 +1,8 @@
 let tg = window.Telegram.WebApp;
 let order = document.getElementById("order");
-let next = document.getElementById("next");
-let checkbox = document.getElementById("checkbox");
 tg.expand();
 
-checkbox.addEventListener("change", () => {
+document.getElementById("checkbox").addEventListener("change", () => {
     if (document.getElementById("checkbox").checked) {
         document.getElementById("next").style.display = "flex";
     } else {
