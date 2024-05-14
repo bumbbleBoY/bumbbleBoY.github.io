@@ -20,14 +20,6 @@ h3{
     text-align: center;
 }
 
-p{
-    width: 350px;
-    margin: 0 auto;
-    font-size: 15px auto;
-    justify-content: left;
+#politiclist{
     text-align: left;
-}
-
-#form {
-    text-align: center;
 }
