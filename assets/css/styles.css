@@ -32,7 +32,6 @@ button {
 
 body {
   color: var(--white-color);
-  background-color: #1a1717;
 }
 
 input,
@@ -55,6 +54,7 @@ img {
   position: relative;
   height: 100vh;
   display: grid;
+  align-items: center;
 }
 .login__img {
   position: absolute;
@@ -68,6 +68,7 @@ img {
   background-color: hsla(0, 0%, 10%, 0.1);
   border: 2px solid var(--white-color);
   margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
   border-radius: 1rem;
   backdrop-filter: blur(8px);
 }
@@ -90,7 +91,9 @@ img {
   column-gap: 0.75rem;
   border-bottom: 2px solid var(--white-color);
 }
-
+.login__icon, .login__eye {
+  font-size: 1.25rem;
+}
 .login__input {
   width: 100%;
   padding-block: 0.8rem;
