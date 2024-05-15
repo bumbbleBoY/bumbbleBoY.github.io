@@ -9,8 +9,8 @@
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
+    color: var(--white-color);
+    background: black;
 }
 
 
@@ -43,8 +43,8 @@ button{
     font-weight: 500;
     cursor: pointer;
     transition: all 500ms ease;
-    color: var(--tg-theme-button-color);
-    background: var(--tg-theme-button-text-color);
+    color: black;
+    background: var(--white-color);
     border-color: black;
 }
 
@@ -87,5 +87,5 @@ input:focus {
 }
 
 #politic{
-    color: blue;
+    color: #7648d9;
 }
