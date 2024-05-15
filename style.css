@@ -18,6 +18,7 @@ h3{
     margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
+    color: white;
 }
 
 #images{
@@ -31,6 +32,7 @@ p{
     font-size: 15px auto;
     justify-content: left;
     text-align: left;
+    color: white;
 }
 
 button{
@@ -45,12 +47,11 @@ button{
     transition: all 500ms ease;
     color: black;
     background: var(--white-color);
-    border-color: black;
 }
 
 
 button:hover{
-    background: var(--tg-theme-secondary-bg-color);
+    background: white;
 }
 
 #form {
