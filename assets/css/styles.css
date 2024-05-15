@@ -66,7 +66,6 @@ img {
 .login__form {
   position: relative;
   background-color: hsla(0, 0%, 10%, 0.1);
-  border: 2px solid var(--white-color);
   margin-inline: 1.5rem;
   padding: 2.5rem 1.5rem;
   border-radius: 1rem;
@@ -150,10 +149,12 @@ img {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--white-color);
+  background: var(--white-color);
   font-weight: var(--font-medium);
   cursor: pointer;
   margin-bottom: 2rem;
+  color: black;
+  
 }
 .login__register {
   text-align: center;
@@ -178,6 +179,11 @@ img {
   font-size: var(--small-font-size);
 }
 
+#images{
+  text-align: center;
+  margin: 500px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -185,7 +191,7 @@ img {
     justify-content: center;
   }
   .login__form {
-    width: 432px;
+    width: 100%;
     padding: 4rem 3rem 3.5rem;
     border-radius: 1.5rem;
   }
