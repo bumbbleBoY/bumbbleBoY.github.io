@@ -32,7 +32,6 @@ button {
 
 body {
   color: var(--white-color);
-  background-color: #1a1717;
 }
 
 input,
@@ -45,7 +44,10 @@ a {
   text-decoration: none;
 }
 
-
+img {
+  max-width: 90%;
+  height: auto;
+}
 
 /*=============== LOGIN ===============*/
 .login {
@@ -54,9 +56,17 @@ a {
   display: grid;
   align-items: center;
 }
+.login__img {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .login__form {
   position: relative;
-  background-color: #1a1717;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--white-color);
   margin-inline: 1.5rem;
   padding: 2.5rem 1.5rem;
   border-radius: 1rem;
@@ -140,12 +150,10 @@ a {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  background: var(--white-color);
+  background-color: var(--white-color);
   font-weight: var(--font-medium);
   cursor: pointer;
   margin-bottom: 2rem;
-  color: black;
-  
 }
 .login__register {
   text-align: center;
@@ -170,19 +178,14 @@ a {
   font-size: var(--small-font-size);
 }
 
-#images{
-  text-align: center;
-  margin: 500px;
-}
-
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 576px) {
   .login {
     justify-content: center;
   }
   .login__form {
-    width: 100%;
+    width: 432px;
     padding: 4rem 3rem 3.5rem;
     border-radius: 1.5rem;
   }
