@@ -9,7 +9,7 @@
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    color: black;
+    color:blue;
 }
 
 
@@ -17,18 +17,18 @@ h3{
     margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
-    color: white;
+    color: blue;
 }
 
 #politiclist{
     text-align: left;
-    color: white;
+    color: blue;
 }
 
 #politicinfo{
     text-align: left;
     text-indent: 10px;
-    color: white;
+    color: blue;
 }
 
 button{
@@ -41,14 +41,14 @@ button{
     font-weight: 500;
     cursor: pointer;
     transition: all 500ms ease;
-    color: black;
-    background: white;
+    color: blue;
+    background: blue;
 
 }
 
 
 button:hover{
-    background: var(--tg-theme-secondary-bg-color);
+    background: blue;
 }
 
 #back {
