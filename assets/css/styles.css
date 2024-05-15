@@ -177,7 +177,7 @@ a {
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
-@media screen {
+@media screen and (min-width: 500px) {
   .login {
     justify-content: center;
   }
