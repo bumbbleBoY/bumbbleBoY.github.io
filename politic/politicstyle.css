@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 *{
     margin: 0;
@@ -7,10 +7,9 @@
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 200;
-    color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
+    color: black;
 }
 
 
@@ -18,15 +17,18 @@ h3{
     margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
+    color: white;
 }
 
 #politiclist{
     text-align: left;
+    color: white;
 }
 
 #politicinfo{
     text-align: left;
     text-indent: 10px;
+    color: white;
 }
 
 button{
@@ -39,9 +41,9 @@ button{
     font-weight: 500;
     cursor: pointer;
     transition: all 500ms ease;
-    color: var(--tg-theme-button-color);
-    background: var(--tg-theme-button-text-color);
-    border-color: black;
+    color: black;
+    background: white;
+
 }
 
 

@@ -21,7 +21,8 @@ order.addEventListener("click", () => {
         vk: document.getElementById("user_vk").value,
         registration: document.getElementById("user_registration").value,
         residence: document.getElementById("user_residence").value,
-        seriesandnumber: document.getElementById("user_seriesandnumber").value,
+        series: document.getElementById("user_series").value,
+        number: document.getElementById("user_number").value,
         dateofissue: document.getElementById("user_dateofissue").value,
         issuedbywhom: document.getElementById("user_issuedbywhom").value,
         division: document.getElementById("user_division").value,
@@ -32,17 +33,18 @@ order.addEventListener("click", () => {
     if ((data['name'].length < 3) 
         || (data['surname'].length < 3) 
         || (data['patronymic'].length < 3) 
-        || (data['birthday'].length < 6)   
+        || (data['birthday'].length < 8)   
         || (data['phone'].length < 8) 
         || (data['email'].length < 10) 
         || (data['registration'].length < 15) 
         || (data['residence'].length < 15) 
-        || (data['seriesandnumber'].length < 5) 
-        || (data['dateofissue'].length < 4) 
+        || (data['series'].length != 4) 
+        || (data['number'].length != 6) 
+        || (data['dateofissue'].length < 8) 
         || (data['issuedbywhom'].length < 4) 
-        || (data['division'].length < 4) 
-        || (data['inn'].length < 5) 
-        || (data['snils'].length < 5)) {
+        || (data['division'].length < 6) 
+        || (data['inn'].length < 10) 
+        || (data['snils'].length < 9)) {
         return document.getElementById("error").style.display = "block";
     }
     tg.sendData(JSON.stringify(data));
