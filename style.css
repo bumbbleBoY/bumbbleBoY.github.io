@@ -9,7 +9,6 @@
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    color: var(--white-color);
     background: black;
 }
 
@@ -45,8 +44,9 @@ button{
     font-weight: 500;
     cursor: pointer;
     transition: all 500ms ease;
-    color: black;
-    background: var(--white-color);
+    color: white;
+    background: white;
+    
 }
 
 
