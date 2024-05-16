@@ -1,6 +1,6 @@
 document.getElementById('inputTask').addEventListener('submit', saveTask);
-
-
+let tg = window.Telegram.WebApp;
+tg.expand();
 function saveTask(e) {
     var taskId = chance.guid();
     var taskContent = document.getElementById("contentInput").value;

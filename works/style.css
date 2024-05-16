@@ -17,10 +17,18 @@ body {
 }
 
 .todolistitem {
-    color: #d3d3d3;
-    cursor: default !important;
-    font-size: 15pt;
     font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 50px;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 500ms ease;
+    color: black;
+    background: white;
 }
 #contentInput {
     background-color: #f1f1f1;
@@ -48,4 +56,13 @@ body {
 h3 {
     color: white;
     text-align: center;
+}
+.form-control {
+    width: 90%;
+    outline: none;
+    margin: 10px 5%;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: 2px solid silver;
+    border-radius: 5px;
 }
