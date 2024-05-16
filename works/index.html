@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='icon' href='https://realtechnerd.github.io/assets/miscimages/rtnlog.jpeg'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://chancejs.com/chance.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container" onload="fetchTasks();">
+      <div>
+        <h3>Список задач</h3>
+      </div>
+      <div class="card-body"></div>
+          <form id="inputTask">
+              <div class="form-group">
+                <input type="text" id="contentInput" class="form-control" autocomplete="off" required>
+              </div>
+              <div id="buttondivc">
+                <button type="submit" class="btn btn-primary" id="buttonc">Добавить сотрудника</button>
+              </div>
+            </form>
+      </div>
+      <br>
+      <ul id="taskList" class="container">
+
+      </ul>
+      <div>
+        <h3>Привет</h3>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
