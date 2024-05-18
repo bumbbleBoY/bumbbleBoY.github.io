@@ -1,6 +1,10 @@
 document.getElementById('inputTask').addEventListener('submit', saveTask);
-let tg = window.Telegram.WebApp;
-tg.expand();
+
+
+//let text = [];
+//   for (let i = 0; i < document.getElementsByName('todolistitem').length; i++) {
+//       text.push(document.getElementsByName('todolistitem').item(i).textContent);
+//  }
 function saveTask(e) {
     var taskId = chance.guid();
     var taskContent = document.getElementById("contentInput").value;
@@ -63,7 +67,7 @@ function fetchTasks() {
         var cont = tasks[i].content;
 
         taskList.innerHTML += "<div class='card task'><div class='card-body'>" +
-        "<button class='btn todolistitem' id='todolistitem'>"+ 
+        "<button class='btn todolistitem' id='todolistitem' name='todolistitem'>"+ 
         cont + 
         "</button>" +  
         '<button onclick="deleteTask(\''+id+'\');" class="btn btn-danger float-right">Delete</button>' + 

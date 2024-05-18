@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+	background: black;
+}
+
+.todolistitem {
+    font-weight: bold;
+    border: 0;
+    cursor: default !important;
+    transition: all 500ms ease;
+    color: black;
+    background: white;
+}
+
+.todolistitem:hover {
+    color: #d3d3d3;
+    cursor: default !important;
+}
+
+#buttondivc{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    width: 90%;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+#contentInput {
+    
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+#buttonc {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    text-align: center;
+}
