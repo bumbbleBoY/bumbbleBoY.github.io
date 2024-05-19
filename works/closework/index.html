@@ -31,12 +31,15 @@
       <div class="row">
         <input type="text" id="cashinput" placeholder="Сумма на конец дня" class="form__input">
       </div>
+
     </form>
     <form id="inputTask">
         <div class="form-group">
           <h3>Список сотрудников</h3>
-          <div class="row">
+          <div class="rownew">
             <input type="text" id="contentInput" autocomplete="off" required placeholder="Имя Фамилия">
+          </div>
+          <div id="buttons">
             <button type="submit" class="btn btn-primary" id="buttonc">Добавить</button>
           </div>
         </div>
@@ -61,8 +64,10 @@
   <div class="salary" id="salary">
     <form id="salaryTask">
       <div class="form-group">
-        <div class="row">
+        <div class="rownew">
           <input type="text" id="salaryInput" autocomplete="off" required placeholder="Имя Фамилия Зарплата">
+        </div>
+        <div id="buttons">
           <button type="submit" class="btn btn-primary" id="buttonc">Добавить</button>
         </div>
       </div>
@@ -74,8 +79,10 @@
   <div class="household" id="household">
     <form id="householdTask">
       <div class="form-group">
-        <div class="row">
+        <div class="rownew">
           <input type="text" id="householdInput" autocomplete="off" required placeholder="Наименование Расход">
+        </div>
+        <div id="buttons">
           <button type="submit" class="btn btn-primary" id="buttonc">Добавить</button>
         </div>
       </div>
@@ -87,8 +94,10 @@
   <div class="collection" id="collection">
     <form id="collectionTask">
       <div class="form-group">
-        <div class="row">
+        <div class="rownew">
           <input type="text" id="collectionInput" autocomplete="off" required placeholder="Сумма">
+        </div>
+        <div id="buttons">
           <button type="submit" class="btn btn-primary" id="buttonc">Добавить</button>
         </div>
       </div>
@@ -100,8 +109,10 @@
   <div class="payment" id="payment">
     <form id="paymentTask">
       <div class="form-group">
-        <div class="row">
+        <div class="rownew">
           <input type="text" id="paymentInput" autocomplete="off" required placeholder="Поставщик Сумма">
+        </div>
+        <div id="buttons">
           <button type="submit" class="btn btn-primary" id="buttonc">Добавить</button>
         </div>
       </div>
@@ -113,8 +124,10 @@
   <div class="other" id="other">
     <form id="otherTask">
       <div class="form-group">
-        <div class="row">
+        <div class="rownew">
           <input type="text" id="otherInput" autocomplete="off" required placeholder="Наименование Сумма">
+        </div>
+        <div id="buttons">
           <button type="submit" class="btn btn-primary" id="buttonc">Добавить</button>
         </div>
       </div>
@@ -124,7 +137,7 @@
     </form>
   </div>
   <div id="closeworkbutton">
-    <button class="btn btn-primary" id="buttonc">Закрыть смену</button>
+    <button class="btn btn-primary" id="endbutton" >Закрыть смену</button>
   </div>
   <script src="script.js"></script>
 </body>

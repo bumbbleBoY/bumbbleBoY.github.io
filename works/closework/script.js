@@ -16,13 +16,12 @@ document.getElementById('paymentTask').addEventListener('submit', function(e) {
 document.getElementById('otherTask').addEventListener('submit', function(e) {
     saveTask(e, 'otherInput', 'othertasks', 'otherTask', 'otherList');
 });
+document.getElementById('endbutton').addEventListener('click', function() {
+    closework();
+});
 
 
 
-let text = [];
-for (let i = 0; i < document.getElementsByName('taskList').length; i++) {
-    text.push(document.getElementsByName('taskList').item(i).textContent);
-}
 function saveTask(e, contentInput, taskin, inputTask, listoftask) {
     var taskId = chance.guid();
     var taskContent = document.getElementById(contentInput).value;
@@ -63,6 +62,24 @@ function deleteTask(id, taskin, listoftask) {
     fetchTasks(taskin, listoftask);
 }
 
+
+function closework(e){
+    let allvariables = ["taskList", "salaryList", "householdList", "collectionList", "paymentList", "otherList"];
+    let text = [];
+    for (let x = 0; x < allvariables.length; x++) {
+        for (let i = 0; i < document.getElementsByName(allvariables[x]).length; i++) {
+            let text1 = document.getElementsByName(allvariables[x]).item(i).textContent;
+            if (x==0){
+                text2=document.getElementsByName('staffselection').item(i).value;
+                text.push(text1 + " " + text2.split(" ")[0]);
+            } else {
+                text.push(text1);
+            }
+        }
+    }
+    alert(text);
+}
+
 function repairtask(){
     fetchTasks("tasks", "taskList");
     fetchTasks("salarytasks", "salaryList");
@@ -75,7 +92,7 @@ function fetchTasks(taskin, listoftask) {
     var tasks = JSON.parse(localStorage.getItem(taskin));
     var taskList = document.getElementById(listoftask);
     if (taskin =="tasks"){
-        var select = '<select id="hourchoice"><option>1 час</option><option>2 часа</option><option>3 часа</option><option>4 часа</option><option>5 часов</option><option>6 часов</option><option>7 часов</option><option>8 часов</option><option>9 часов</option><option>10 часов</option><option>11 часов</option></select>' 
+        var select = '<select id="hourchoice" name="staffselection"><option>1 час</option><option>2 часа</option><option>3 часа</option><option>4 часа</option><option>5 часов</option><option>6 часов</option><option>7 часов</option><option>8 часов</option><option>9 часов</option><option>10 часов</option><option>11 часов</option></select>' 
     } else {
         var select = ''
     }
