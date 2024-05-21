@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <title>To Do List</title>
+    <title>Close Work</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container" onload="repairtask();">
@@ -20,16 +20,16 @@
     <h1>Закрытие смены</h1>
     <form>
       <div class="row">
-        <input type="text" id="cashinput" placeholder="Приход наличных" class="form__input">
+        <input type="text" id="casharrival" placeholder="Приход наличных" class="form__input">
       </div>
       <div class="row">
-        <input type="text" id="cashinput" placeholder="Касса эквайринг" class="form__input">
+        <input type="text" id="cashacquiring" placeholder="Касса эквайринг" class="form__input">
       </div>
       <div class="row">
-        <input type="text" id="cashinput" placeholder="Касса перевод" class="form__input">
+        <input type="text" id="cashtransfer" placeholder="Касса перевод" class="form__input">
       </div>
       <div class="row">
-        <input type="text" id="cashinput" placeholder="Сумма на конец дня" class="form__input">
+        <input type="text" id="theamountendday" placeholder="Сумма на конец дня" class="form__input">
       </div>
 
     </form>
@@ -136,9 +136,11 @@
       </ul>
     </form>
   </div>
+  <div id="error"><h4>Заполните все обязательные поля</h4></div>
   <div id="closeworkbutton">
     <button class="btn btn-primary" id="endbutton" >Закрыть смену</button>
   </div>
+  <div id="images"></div>
   <script src="script.js"></script>
 </body>
 </html>

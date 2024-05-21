@@ -19,6 +19,8 @@ document.getElementById('otherTask').addEventListener('submit', function(e) {
 document.getElementById('endbutton').addEventListener('click', function() {
     closework();
 });
+let tg = window.Telegram.WebApp;
+tg.expand();
 
 
 
@@ -62,22 +64,45 @@ function deleteTask(id, taskin, listoftask) {
     fetchTasks(taskin, listoftask);
 }
 
+function cycleclosework(name){
+    let text = [];
+    for (let i = 0; i < document.getElementsByName(name).length; i++) {
+        let text1 = document.getElementsByName(name).item(i).textContent;
+        if (name=="taskList"){
+            text2=document.getElementsByName('staffselection').item(i).value;
+            text.push(text1 + " " + text2.split(" ")[0]);
+
+        } else {
+            text.push(text1);
+        }
+    }
+    return text
+}
 
 function closework(e){
     let allvariables = ["taskList", "salaryList", "householdList", "collectionList", "paymentList", "otherList"];
-    let text = [];
-    for (let x = 0; x < allvariables.length; x++) {
-        for (let i = 0; i < document.getElementsByName(allvariables[x]).length; i++) {
-            let text1 = document.getElementsByName(allvariables[x]).item(i).textContent;
-            if (x==0){
-                text2=document.getElementsByName('staffselection').item(i).value;
-                text.push(text1 + " " + text2.split(" ")[0]);
-            } else {
-                text.push(text1);
-            }
-        }
+    let data = {
+        casharrival: document.getElementById("casharrival").value,
+        cashacquiring: document.getElementById("cashacquiring").value,
+        cashtransfer: document.getElementById("cashtransfer").value,
+        theamountendday: document.getElementById("theamountendday").value,
+        staff: cycleclosework("taskList"),
+        salary: cycleclosework("salaryList"),
+        household: cycleclosework("householdList"),
+        collection: cycleclosework("collectionList"),
+        payment: cycleclosework("paymentList"),
+        other: cycleclosework("otherList")
+    
     }
-    alert(text);
+    if ((data['casharrival'].length < 3) 
+        || (data['cashacquiring'].length < 3) 
+        || (data['cashtransfer'].length < 3) 
+        || (data['theamountendday'].length < 3)
+        || (data['staff'].length < 1)) {
+        return document.getElementById("error").style.display = "block";
+    }
+    tg.sendData(JSON.stringify(data));
+    tg.close();
 }
 
 function repairtask(){

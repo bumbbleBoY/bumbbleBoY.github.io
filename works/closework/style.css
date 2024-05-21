@@ -61,7 +61,10 @@ body {
 }
 
 #contentInput,
-#cashinput, 
+#casharrival,
+#cashacquiring,
+#cashtransfer,
+#theamountendday, 
 #salaryInput,
 #collectionInput,
 #paymentInput,
@@ -181,4 +184,14 @@ h3{
 
 #buttons {
     text-align: center;
+}
+#error{
+    text-align: center;
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+#images{
+    text-align: center;
+    margin: 500px;
 }
