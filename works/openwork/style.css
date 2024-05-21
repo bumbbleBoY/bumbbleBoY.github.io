@@ -83,3 +83,13 @@ h1{
 #main{
     text-align: center;
 }
+#error{
+    text-align: center;
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+#images{
+    text-align: center;
+    margin: 500px;
+}

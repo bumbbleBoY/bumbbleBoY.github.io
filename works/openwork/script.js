@@ -1,79 +1,14 @@
 document.getElementById('inputTask').addEventListener('submit', saveTask);
+let tg = window.Telegram.WebApp;
+tg.expand();
 
-
-//let text = [];
-//   for (let i = 0; i < document.getElementsByName('todolistitem').length; i++) {
-//       text.push(document.getElementsByName('todolistitem').item(i).textContent);
-//  }
 function saveTask(e) {
-    var taskId = chance.guid();
-    var taskContent = document.getElementById("contentInput").value;
-    console.log(taskContent);
-    var task = {
-        id: taskId,
-        content: taskContent
+    data = {
+        theamountstartday: document.getElementById("contentInput").value
     }
-    console.log(task);
-
-    if (localStorage.getItem('tasks') == null) {
-    var tasks = [];
-    tasks.push(task);
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    } else {
-    var tasks = JSON.parse(localStorage.getItem('tasks'));
-    tasks.push(task);
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    if ((data['theamountstartday'].length < 3)){
+        return document.getElementById("error").style.display = "block";
     }
-
-    document.getElementById('inputTask').reset();
-
-    fetchTasks();
-
-    e.preventDefault();
-}
-function finishedTask(id) {
-    const tasks = JSON.parse(localStorage.getItem('tasks'));
-
-    for (var i = 0; i < tasks.length; i++) {
-        if (tasks[i].id === id) {
-            tasks[i].content = "<del>"+tasks[i].content+"</del>";
-        }
-    }
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-
-    fetchTasks();
-} 
-function deleteTask(id) {
-    var tasks = JSON.parse(localStorage.getItem('tasks'));
-
-    for (var i = 0; i < tasks.length; i++) {
-        if (tasks[i].id === id) {
-            tasks.splice(i, 1);
-        }   
-    }
-
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-
-    fetchTasks();
-}
-function fetchTasks() {
-    var tasks = JSON.parse(localStorage.getItem('tasks'));
-    var taskList = document.getElementById("taskList");
-
-    taskList.innerHTML = "";
-
-    for (let i = 0; i < tasks.length;i++) {
-        var id = tasks[i].id;
-        var cont = tasks[i].content;
-
-        taskList.innerHTML += "<div class='card task'><div class='card-body'>" +
-        "<button class='btn todolistitem' id='todolistitem' name='todolistitem'>"+ 
-        cont + 
-        "</button>" +  
-        '<button onclick="deleteTask(\''+id+'\');" class="btn btn-danger float-right">Delete</button>' + 
-        "</div></div>" +
-        '<br>';
-    }
-    
-
+    tg.sendData(JSON.stringify(data));
+    tg.close();
 }
