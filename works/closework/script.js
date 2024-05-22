@@ -129,7 +129,7 @@ function fetchTasks(taskin, listoftask) {
         var id = tasks[i].id;
         var cont = tasks[i].content;
 
-        taskList.innerHTML += "<div class='card task' style='width: 90%; max-width: 540px; margin-left: auto; margin-right: auto'><div class='card_body'>" +
+        taskList.innerHTML += "<div class='card task' style='width: 100%; max-width: 540px; margin-left: auto; margin-right: auto'><div class='card_body'>" +
         '<button class="btn todolistitem" id="todolistitem" name=\''+listoftask+'\' >'+ 
         cont + 
         "</button>" + 
