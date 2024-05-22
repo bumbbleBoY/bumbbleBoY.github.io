@@ -117,9 +117,11 @@ function fetchTasks(taskin, listoftask) {
     var tasks = JSON.parse(localStorage.getItem(taskin));
     var taskList = document.getElementById(listoftask);
     if (taskin =="tasks"){
-        var select = '<select id="hourchoice" name="staffselection"><option>1 час</option><option>2 часа</option><option>3 часа</option><option>4 часа</option><option>5 часов</option><option>6 часов</option><option>7 часов</option><option>8 часов</option><option>9 часов</option><option>10 часов</option><option>11 часов</option></select>' 
+        var select1 = '<select id="hourchoice" name="staffselection"><option>1 час</option><option>2 часа</option><option>3 часа</option><option>4 часа</option><option>5 часов</option><option>6 часов</option><option>7 часов</option><option>8 часов</option><option>9 часов</option><option>10 часов</option><option>11 часов</option></select>' 
+        var select2 = '<select id="postchoice" name="postselection"><option>Админ</option><option>Инструктор</option><option>Стажер</option></select>'
     } else {
-        var select = ''
+        var select1 = ''
+        var select2 = ''
     }
     taskList.innerHTML = "";
     
@@ -131,8 +133,9 @@ function fetchTasks(taskin, listoftask) {
         '<button class="btn todolistitem" id="todolistitem" name=\''+listoftask+'\' >'+ 
         cont + 
         "</button>" + 
-        select+
-        '<button onclick="deleteTask(\''+id+'\', \''+taskin+'\', \''+listoftask+'\');" class="btn btn-danger float-right">Delete</button>' + 
+        select1+
+        select2+
+        '<button onclick="deleteTask(\''+id+'\', \''+taskin+'\', \''+listoftask+'\');" class="btn btn-danger float-right">🗑️</button>' + 
         "</div></div>" +
         '<br>';
     }
