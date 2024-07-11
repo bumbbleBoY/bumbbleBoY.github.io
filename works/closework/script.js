@@ -1,5 +1,5 @@
 document.getElementById('inputTask').addEventListener('submit', function(e) {
-    saveTask(e, 'contentInput', 'tasks', 'inputTask', 'taskList');
+    saveTask(e, 'namechoice', 'tasks', 'inputTask', 'taskList');
 });
 document.getElementById('salaryTask').addEventListener('submit', function(e) {
     saveTask(e, 'salaryInput', 'salarytasks', 'salaryTask', 'salaryList');
@@ -19,8 +19,7 @@ document.getElementById('otherTask').addEventListener('submit', function(e) {
 document.getElementById('endbutton').addEventListener('click', function() {
     closework();
 });
-let tg = window.Telegram.WebApp;
-tg.expand();
+
 
 
 
@@ -129,7 +128,7 @@ function fetchTasks(taskin, listoftask) {
         var id = tasks[i].id;
         var cont = tasks[i].content;
 
-        taskList.innerHTML += "<div class='card task' style='width: 100%; max-width: 540px; margin-left: auto; margin-right: auto'><div class='card_body'>" +
+        taskList.innerHTML += "<div class='card task' style='width: 110%; max-width: 540px; margin-left: auto; margin-right: auto'><div class='card_body'>" +
         '<button class="btn todolistitem" id="todolistitem" name=\''+listoftask+'\' >'+ 
         cont + 
         "</button>" + 

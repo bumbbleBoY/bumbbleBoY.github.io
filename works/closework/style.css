@@ -110,7 +110,8 @@ h3{
 
 
 
-#expenseschoice {
+#expenseschoice,
+#namechoice {
 	width: 90%;
     max-width: 540px;
 	border: 1px solid #7E9BBD;
@@ -134,12 +135,14 @@ h3{
 }
 
 #expenseschoice::-ms-expand,
+#namechoice::-ms-expand,
 #hourchoice::-ms-expand,
 #postchoice::-ms-expand {
 	display: none;
 }
 
 #expenseschoice:focus,
+#namechoice:focus,
 #hourchoice:focus,
 #postchoice:focus {
 	outline: none;
@@ -147,12 +150,14 @@ h3{
 }
 
 #expenseschoice-wrapper,
+#namechoice-wrapper,
 #hourchoice-wrapper,
 #postchoice-wrapper {
 	position: relative;
 }
 
 #expenseschoice-wrapper::before,
+#namechoice-wrapper::before,
 #hourchoice-wrapper::before,
 #postchoice-wrapper::before {
     content: "";
@@ -199,4 +204,7 @@ h3{
 #images{
     text-align: center;
     margin: 500px;
+}
+#namechoice{
+    width: 100%;
 }
